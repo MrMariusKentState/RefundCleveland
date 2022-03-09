@@ -1,0 +1,26 @@
+
+The time stamps below are in reference to which files are being rendered in the video:
+
+
+0:00 - 0:10
+
+RefuncCleOverallPercentage.html
+RefundCleOverallPercentage.css
+
+
+0:10 - 0:27
+
+RefundCleOverallTotals.html
+RefundCleTotals.css
+
+
+0:27 - 0:48
+
+RefundClePercentages.html
+RefundClePercentages.css
+
+
+0:48 - end
+
+RefundCleveland.html
+RefundCleveland.css

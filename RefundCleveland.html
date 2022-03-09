@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "RefundCleveland.css"/>
+    <title>Refund Cleveland</title>
+
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart', 'bar']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawEnvironmentChart);
+
+      function drawEnvironmentChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Expenses'],
+          ['2019 actual',  33966932],
+          ['2020 actual',  34006956],
+          ['2021 unaudited',  39977984],
+          ['2022 budget',  40005257]
+          ]);
+
+        var options = {
+          
+          width: 800,
+          height: 400,
+          bar: {groupWidth: "95%"},
+          legend: { position: 'bottom' },
+          // vAxis: { format: 'currency'}
+          // vAxis: {
+          //   viewWindow: {
+          //     min: 200000000,
+          //     max: 230000000
+          //   },
+          //   ticks: [20000000, 205000000,210000000,215000000,220000000,225000000,230000000]
+          // }
+          
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('environment_chart'));
+
+        chart.draw(data, options);
+      }
+
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawHealthChart);
+
+      function drawHealthChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Expenses'],
+          ['2019 actual',  6238843],
+          ['2020 actual',  6515949],
+          ['2021 unaudited',  6505316],
+          ['2022 budget',  9868366]
+          ]);
+
+        var options = {
+          
+          width: 800,
+          height: 400,
+          bar: {groupWidth: "95%"},
+          legend: { position: 'bottom' },
+          
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('health_chart'));
+
+        chart.draw(data, options);
+      }
+
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawCommunityChart);
+
+      function drawCommunityChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Expenses'],
+          ['2019 actual',  35788485],
+          ['2020 actual',  36932490],
+          ['2021 unaudited',  39341013],
+          ['2022 budget',  44171442]
+          ]);
+
+        var options = {
+          
+          width: 800,
+          height: 400,
+          bar: {groupWidth: "95%"},
+          legend: { position: 'bottom' },
+          
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('community_chart'));
+
+        chart.draw(data, options);
+      }
+
+
+
+
+// Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawInfrastructureChart);
+
+      function drawInfrastructureChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Expenses'],
+          ['2019 actual',  66621278],
+          ['2020 actual',  52614486],
+          ['2021 unaudited',  56291666],
+          ['2022 budget',  53354259]
+          ]);
+
+        var options = {
+          
+          width: 800,
+          height: 400,
+          bar: {groupWidth: "95%"},
+          legend: { position: 'bottom' },
+          
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('infrastructure_chart'));
+
+        chart.draw(data, options);
+      }
+
+
+
+
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawPolicingChart);
+
+      function drawPolicingChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Expenses'],
+          ['2019 actual',  216928495],
+          ['2020 actual',  218163964],
+          ['2021 unaudited',  220802402],
+          ['2022 budget',  237046040]
+          ]);
+
+        var options = {
+          
+          width: 800,
+          height: 400,
+          bar: {groupWidth: "95%"},
+          legend: { position: 'bottom' },
+          
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('policing_chart'));
+
+        chart.draw(data, options);
+      }
+
+
+      google.charts.setOnLoadCallback(drawAdminChart);
+
+      function drawAdminChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Expenses'],
+          ['2019 actual',  143536732],
+          ['2020 actual',  120146367],
+          ['2021 unaudited',  128279812],
+          ['2022 budget',  122462271]
+          ]);
+
+        var options = {
+          
+          width: 800,
+          height: 400,
+          bar: {groupWidth: "95%"},
+          legend: { position: 'bottom' },
+          
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('admin_chart'));
+
+        chart.draw(data, options);
+      }
+
+
+
+
+    </script>
+  </head>
+
+
+
+
+<body>
+    <!--Div that will hold the pie chart-->
+    <h2>Total budgetary expenses for Environment and Sustainability (2019-22)</h2>
+    <h2>(U.S. $)</h2>
+    <div id = "environment_chart"></div>
+    <br>
+    <h2>Total budgetary expenses for Health (2019-22)</h2>
+    <h2>(U.S. $)</h2>
+    <div id = "health_chart"></div>
+    <h2>Total budgetary expenses for Community Services (2019-22)</h2>
+    <h2>(U.S. $)</h2>
+    <div id = "community_chart"></div>
+    <h2>Total budgetary expenses for Infrastructure and Housing (2019-22)</h2>
+    <h2>(U.S. $)</h2>
+    <div id = "infrastructure_chart"></div>
+    <h2>Total budgetary expenses for Policing and Corrections (2019-22)</h2>
+    <h2>(U.S. $)</h2>
+    <div id = "policing_chart"></div>
+    <h2>Total budgetary expenses for Administration, Law, and Other (2019-22)</h2>
+    <h2>(U.S. $)</h2>
+    <div id = "admin_chart"></div>
+
+
+
+<!-- From https://developers.google.com/chart/interactive/docs/quick_start -->
+
+<!-- For a line graph: https://developers.google.com/chart/interactive/docs/gallery/linechart -->
+
+<!-- Make a chart exclusively using css: https://css-tricks.com/how-to-make-a-line-chart-with-css/ -->
+
+
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "RefundClePercentages.css"/>
+    <title>Percentage values</title>
+
+     <!--Load the AJAX API-->
+     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+     <script type="text/javascript">
+ 
+       // Load the Visualization API and the corechart package.
+       google.charts.load('current', {'packages':['corechart', 'bar']});
+
+       google.charts.setOnLoadCallback(drawEnvt);
+
+        function drawEnvt() {
+        var data = google.visualization.arrayToDataTable([
+            ['Year', 'Percentage of budget'],
+            ['2019 actual',  5.31],
+            ['2020 actual',  5.61],
+            ['2021 unaudited',  6.30],
+            ['2022 budget',  6.12]
+            ]);
+
+        var options = {
+            
+            width: 800,
+            height: 400,
+            bar: {groupWidth: "95%"},
+            legend: { position: 'bottom' },
+            
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('envt'));
+
+        chart.draw(data, options);
+        }
+
+
+
+        google.charts.setOnLoadCallback(drawHealth);
+
+        function drawHealth() {
+        var data = google.visualization.arrayToDataTable([
+            ['Year', 'Percentage of budget'],
+            ['2019 actual',  0.97],
+            ['2020 actual',  1.07],
+            ['2021 unaudited',  1.03],
+            ['2022 budget',  1.51]
+            ]);
+
+        var options = {
+            
+            width: 800,
+            height: 400,
+            bar: {groupWidth: "95%"},
+            legend: { position: 'bottom' },
+            
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('health'));
+
+        chart.draw(data, options);
+        }
+
+
+
+
+
+        google.charts.setOnLoadCallback(drawCommunity);
+
+        function drawCommunity() {
+        var data = google.visualization.arrayToDataTable([
+            ['Year', 'Percentage of budget'],
+            ['2019 actual',  5.59],
+            ['2020 actual',  6.09],
+            ['2021 unaudited',  6.20],
+            ['2022 budget',  6.76]
+            ]);
+
+        var options = {
+            
+            width: 800,
+            height: 400,
+            bar: {groupWidth: "95%"},
+            legend: { position: 'bottom' },
+            
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('community'));
+
+        chart.draw(data, options);
+        }
+
+
+
+        
+        google.charts.setOnLoadCallback(drawInfrastructure);
+
+        function drawInfrastructure() {
+        var data = google.visualization.arrayToDataTable([
+            ['Year', 'Percentage of budget'],
+            ['2019 actual',  10.41],
+            ['2020 actual',  8.68],
+            ['2021 unaudited',  8.88],
+            ['2022 budget',  8.16]
+            ]);
+
+        var options = {
+            
+            width: 800,
+            height: 400,
+            bar: {groupWidth: "95%"},
+            legend: { position: 'bottom' },
+            
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('infrastructure'));
+
+        chart.draw(data, options);
+        }
+
+
+                
+
+        google.charts.setOnLoadCallback(drawEmergency);
+
+        function drawEmergency() {
+        var data = google.visualization.arrayToDataTable([
+            ['Year', 'Percentage of budget'],
+            ['2019 actual',  21.39],
+            ['2020 actual',  22.75],
+            ['2021 unaudited',  22.54],
+            ['2022 budget',  22.45]
+            ]);
+
+        var options = {
+            
+            width: 800,
+            height: 400,
+            bar: {groupWidth: "95%"},
+            legend: { position: 'bottom' },
+            
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('emergency'));
+
+        chart.draw(data, options);
+        }
+
+
+
+
+
+        google.charts.setOnLoadCallback(drawPolicing);
+
+        function drawPolicing() {
+        var data = google.visualization.arrayToDataTable([
+            ['Year', 'Percentage of budget'],
+            ['2019 actual',  33.90],
+            ['2020 actual',  35.98],
+            ['2021 unaudited',  34.82],
+            ['2022 budget',  36.27]
+            ]);
+
+        var options = {
+            
+            width: 800,
+            height: 400,
+            bar: {groupWidth: "95%"},
+            legend: { position: 'bottom' },
+            
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('policing'));
+
+        chart.draw(data, options);
+        }
+
+
+
+
+        
+        google.charts.setOnLoadCallback(drawAdmin);
+
+        function drawAdmin() {
+        var data = google.visualization.arrayToDataTable([
+            ['Year', 'Percentage of budget'],
+            ['2019 actual',  22.43],
+            ['2020 actual',  19.82],
+            ['2021 unaudited',  20.23],
+            ['2022 budget',  18.74]
+            ]);
+
+        var options = {
+            
+            width: 800,
+            height: 400,
+            bar: {groupWidth: "95%"},
+            legend: { position: 'bottom' },
+            
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('admin'));
+
+        chart.draw(data, options);
+        }
+
+
+
+    </script>
+</head>
+<body>
+
+    <h2>Percentage of budgetary expenses (Environment and Sustainability, 2019-22)</h2>
+    
+    <div id = "envt"></div>
+    <h2>Percentage of budgetary expenses (Health, 2019-22)</h2>
+    
+    <div id = "health"></div>
+    <h2>Percentage of budgetary expenses (Community Services, 2019-22)</h2>
+    
+    <div id = "community"></div>
+    <h2>Percentage of budgetary expenses (Infrastructure and Housing, 2019-22)</h2>
+    
+    <div id = "infrastructure"></div>
+    <h2>Percentage of budgetary expenses (Emergency Services, 2019-22)</h2>
+    
+    <div id = "emergency"></div>
+    <h2>Percentage of budgetary expenses (Policing and Corrections, 2019-22)</h2>
+    
+    <div id = "policing"></div>
+    <h2>Percentage of budgetary expenses (Administration, Law, and Other, 2019-22)</h2>
+    
+    <div id = "admin"></div>
+    
+</body>
+</html>

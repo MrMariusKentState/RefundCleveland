@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "RefundCleOverallPercentage.css"/>
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart', 'bar']})
+
+      google.charts.setOnLoadCallback(drawnineteen);
+
+        function drawnineteen() {
+        var data = google.visualization.arrayToDataTable([
+            ['Year', 'Percentage of budget', {role: 'style'}],
+            ['Policing and Corrections',  33.90, 'color:blue'],
+            ['Emergency Services',  21.39, 'color:green'],
+            ['Infrastructure and Housing',  10.41, 'color:purple'],
+            ['Community Services',  5.59, 'color:red'],
+            ['Environment and Sustainability',  5.31, 'color:lightblue'],
+            ['Health',  0.97, 'orange'],
+            ['Administration, Law, and Other',  22.43, 'color:grey']
+            ]);
+
+        var options = {
+            
+            width: 1200,
+            height: 400,
+            colors:['blue','green','purple','red','lightblue','orange','grey'],
+            vAxis: {
+                    title: '2019 budget percentage',
+                    },
+            bar: {groupWidth: "95%"},
+            legend: { position: 'none' },
+            
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('twentynineteen'));
+
+        chart.draw(data, options);
+        }
+
+    
+
+        google.charts.setOnLoadCallback(drawtwenty);
+
+        function drawtwenty() {
+        var data = google.visualization.arrayToDataTable([
+            ['Year', 'Percentage of budget', {role: 'style'}],
+            ['Policing and Corrections',  35.98, 'color:blue'],
+            ['Emergency Services',  22.75, 'color:green'],
+            ['Infrastructure and Housing',  8.68, 'color:purple'],
+            ['Community Services',  6.09, 'color:red'],
+            ['Environment and Sustainability',  5.61, 'color:lightblue'],
+            ['Health',  1.07, 'orange'],
+            ['Administration, Law, and Other',  19.82, 'color:grey']
+            ]);
+
+        var options = {
+            
+            width: 1200,
+            height: 400,
+            colors:['blue','green','purple','red','lightblue','orange','grey'],
+            vAxis: {
+                    title: '2020 budget percentage',
+                    },
+            bar: {groupWidth: "95%"},
+            legend: { position: 'none' },
+            
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('twentytwenty'));
+
+        chart.draw(data, options);
+        }
+
+
+
+        google.charts.setOnLoadCallback(drawtwentyone);
+
+        function drawtwentyone() {
+        var data = google.visualization.arrayToDataTable([
+            ['Year', 'Percentage of budget', {role: 'style'}],
+            ['Policing and Corrections',  34.82, 'color:blue'],
+            ['Emergency Services',  22.54, 'color:green'],
+            ['Infrastructure and Housing',  8.88, 'color:purple'],
+            ['Community Services',  6.20, 'color:red'],
+            ['Environment and Sustainability',  6.30, 'color:lightblue'],
+            ['Health',  1.03, 'orange'],
+            ['Administration, Law, and Other',  20.23, 'color:grey']
+            ]);
+
+        var options = {
+            
+            width: 1200,
+            height: 400,
+            vAxis: {
+                    title: '2021 budget percentage',
+                    },
+            colors:['blue','green','purple','red','lightblue','orange','grey'],
+            bar: {groupWidth: "95%"},
+            legend: { position: 'none' },
+            
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('twentytwentyone'));
+
+        chart.draw(data, options);
+        }
+
+
+
+
+
+        google.charts.setOnLoadCallback(drawtwentytwo);
+
+        function drawtwentytwo() {
+        var data = google.visualization.arrayToDataTable([
+            ['Year', 'Percentage of budget', {role: 'style'}],
+            ['Policing and Corrections',  36.27, 'color:blue'],
+            ['Emergency Services',  22.45, 'color:green'],
+            ['Infrastructure and Housing',  8.16, 'color:purple'],
+            ['Community Services',  6.76, 'color:red'],
+            ['Environment and Sustainability',  6.12, 'color:lightblue'],
+            ['Health',  1.51, 'orange'],
+            ['Administration, Law, and Other',  18.74, 'color:grey']
+            ]);
+
+        var options = {
+            
+            width: 1200,
+            height: 400,
+            colors:['blue','green','purple','red','lightblue','orange','grey'],
+            vAxis: {
+                    title: '2022 budget percentage',
+                    },
+            bar: {groupWidth: "95%"},
+            legend: { position: 'none' },
+            
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('twentytwentytwo'));
+
+        chart.draw(data, options);
+        }
+
+
+    </script>
+</head>
+<body>
+           
+            <h2 class = "header">Budgetary percentage breakdown for 2019</h2>
+            <div id = "twentynineteen"></div>
+                
+            <h2 class = "header">Budgetary percentage breakdown for 2020</h2>
+            <div id = "twentytwenty"></div>
+       
+            <h2 class = "header">Budgetary percentage breakdown for 2021</h2>
+            <div id= "twentytwentyone"></div>
+       
+            <h2 class = "header">Budgetary percentage breakdown for 2022</h2>
+            <div id = "twentytwentytwo"></div>
+     
+      
+
+</body>
+</html>
+
+<!-- Also consider drawing a stacked bar graph (4 bars on top of each other representing % of budget for each year for one category) -->
+<!-- Also consider drawing a stacked bar graph (4 bars on top of each other representing absolute $$s for each year of one category ) -->
+<!-- Create a set up where when you click on a year, bar chart replaces last year -->

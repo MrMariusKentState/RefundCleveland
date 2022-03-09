@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "RefundCleTotals.css"/>
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart', 'bar']})
+
+      google.charts.setOnLoadCallback(drawnineteen);
+
+      function drawnineteen() {
+        var data = google.visualization.arrayToDataTable([
+            ['Year', 'Total expenses(U.S.$)', {role: 'style'}],
+            ['Policing and Corrections',  216928495, 'color:blue'],
+            ['Emergency Services',  136869117, 'color:green'],
+            ['Infrastructure and Housing',  66621278, 'color:purple'],
+            ['Community Services',  35788485, 'color:red'],
+            ['Environment and Sustainability',  33966932, 'color:lightblue'],
+            ['Health',  6238843, 'orange'],
+            ['Administration, Law, and Other',  143536732, 'color:grey']
+            ]);
+
+        var options = {
+            
+            width: 1200,
+            height: 400,
+            colors:['blue','green','purple','red','lightblue','orange','grey'],
+            vAxis: {
+                    title: 'Total expenses(U.S. dollars)',
+                    },
+            bar: {groupWidth: "95%"},
+            legend: { position: 'none' },
+            
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('twentynineteen'));
+
+        chart.draw(data, options);
+        }
+
+
+
+
+
+        google.charts.setOnLoadCallback(drawtwenty);
+
+        function drawtwenty() {
+        var data = google.visualization.arrayToDataTable([
+            ['Year', 'Total expenses(U.S.$)', {role: 'style'}],
+            ['Policing and Corrections',  218163964, 'color:blue'],
+            ['Emergency Services',  137953502, 'color:green'],
+            ['Infrastructure and Housing',  52614486, 'color:purple'],
+            ['Community Services',  36932490, 'color:red'],
+            ['Environment and Sustainability',  34006956, 'color:lightblue'],
+            ['Health',  6515949, 'orange'],
+            ['Administration, Law, and Other',  120146367, 'color:grey']
+            ]);
+
+        var options = {
+            
+            width: 1200,
+            height: 400,
+            colors:['blue','green','purple','red','lightblue','orange','grey'],
+            vAxis: {
+                    title: 'Total expenses(U.S. dollars)',
+                    },
+            bar: {groupWidth: "95%"},
+            legend: { position: 'none' },
+            
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('twentytwenty'));
+
+        chart.draw(data, options);
+        }
+
+
+        
+
+        google.charts.setOnLoadCallback(drawtwentyone);
+
+        function drawtwentyone() {
+        var data = google.visualization.arrayToDataTable([
+            ['Year', 'Total expenses(U.S.$)', {role: 'style'}],
+            ['Policing and Corrections',  220802402, 'color:blue'],
+            ['Emergency Services',  142939315, 'color:green'],
+            ['Infrastructure and Housing',  56291666, 'color:purple'],
+            ['Community Services',  39341013, 'color:red'],
+            ['Environment and Sustainability',  39977984, 'color:lightblue'],
+            ['Health',  6505316, 'orange'],
+            ['Administration, Law, and Other',  128279812, 'color:grey']
+            ]);
+
+        var options = {
+            
+            width: 1200,
+            height: 400,
+            colors:['blue','green','purple','red','lightblue','orange','grey'],
+            vAxis: {
+                    title: 'Total expenses(U.S. dollars)',
+                    },
+            bar: {groupWidth: "95%"},
+            legend: { position: 'none' },
+            
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('twentytwentyone'));
+
+        chart.draw(data, options);
+        }
+
+
+
+
+        google.charts.setOnLoadCallback(drawtwentytwo);
+
+        function drawtwentytwo() {
+        var data = google.visualization.arrayToDataTable([
+            ['Year', 'Total expenses(U.S.$)', {role: 'style'}],
+            ['Policing and Corrections',  237046040, 'color:blue'],
+            ['Emergency Services',  146739779, 'color:green'],
+            ['Infrastructure and Housing',  53354259, 'color:purple'],
+            ['Community Services',  44171442, 'color:red'],
+            ['Environment and Sustainability',  40005257, 'color:lightblue'],
+            ['Health',  9868366, 'orange'],
+            ['Administration, Law, and Other',  122462271, 'color:grey']
+            ]);
+
+        var options = {
+            
+            width: 1200,
+            height: 400,
+            colors:['blue','green','purple','red','lightblue','orange','grey'],
+            vAxis: {
+                    title: 'Total expenses(U.S. dollars)',
+                    },
+            bar: {groupWidth: "95%"},
+            legend: { position: 'none' },
+            
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('twentytwentytwo'));
+
+        chart.draw(data, options);
+        }
+
+
+
+
+
+      </script>
+</head>
+<body>
+    <h2>Total budgetary expenses for 2019 (actual)</h2>
+    <div id = "twentynineteen"></div>
+    <br>
+    <h2>Total budgetary expenses for 2020 (actual)</h2>
+    <div id = "twentytwenty"></div>
+    <br>
+    <h2>Total budgetary expenses for 2021 (unaudited)</h2>
+    <div id = "twentytwentyone"></div>
+    <br>
+    <h2>2022 Budget</h2>
+    <div id = "twentytwentytwo"></div>
+    <br>
+
+</body>
+</html>
