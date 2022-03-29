@@ -27,6 +27,41 @@
             ['Administration, Law, and Other',  22.43, 'color:grey', '22.43%']
             ]);
 
+
+        var data2020 = google.visualization.arrayToDataTable([
+            ['Year', 'Percentage of budget', {role: 'style'}, {type: 'string', role: 'annotation'}],
+            ['Policing and Corrections',  35.98, 'color:blue', '35.98%'],
+            ['Emergency Services',  22.75, 'color:green', '22.75%'],
+            ['Infrastructure and Housing',  8.68, 'color:purple', '8.68%'],
+            ['Community Services',  6.09, 'color:red', '6.09%'],
+            ['Environment and Sustainability',  5.61, 'color:lightblue', '5.61%'],
+            ['Health',  1.07, 'orange', '1.07%'],
+            ['Administration, Law, and Other',  19.82, 'color:grey', '19.82%']
+            ]);
+
+        var data2021 = google.visualization.arrayToDataTable([
+            ['Year', 'Percentage of budget', {role: 'style'}, {type: 'string', role: 'annotation'}],
+            ['Policing and Corrections',  34.82, 'color:blue', '34.82%'],
+            ['Emergency Services',  22.54, 'color:green', '22.54%'],
+            ['Infrastructure and Housing',  8.88, 'color:purple', '8.88%'],
+            ['Community Services',  6.20, 'color:red', '6.20%'],
+            ['Environment and Sustainability',  6.30, 'color:lightblue', '6.30%'],
+            ['Health',  1.03, 'orange', '1.03%'],
+            ['Administration, Law, and Other',  20.23, 'color:grey', '20.23%']
+            ]);
+
+        var data2022 = google.visualization.arrayToDataTable([
+            ['Year', 'Percentage of budget', {role: 'style'}, {type: 'string', role: 'annotation'}],
+            ['Policing and Corrections',  36.27, 'color:blue', '36.27%'],
+            ['Emergency Services',  22.45, 'color:green', '22.45%'],
+            ['Infrastructure and Housing',  8.16, 'color:purple', '8.16%'],
+            ['Community Services',  6.76, 'color:red', '6.76%'],
+            ['Environment and Sustainability',  6.12, 'color:lightblue', '6.12%'],
+            ['Health',  1.51, 'orange', '1.51%'],
+            ['Administration, Law, and Other',  18.74, 'color:grey', '18.74%']
+            ]);
+
+
         var options = {
             
             width: 1200,
@@ -39,28 +74,8 @@
             legend: { position: 'none' },
             
         };
-   
-        var data2020 = google.visualization.arrayToDataTable([
-            ['Year', 'Percentage of budget', {role: 'style'}, {type: 'string', role: 'annotation'}],
-            ['Policing and Corrections',  35.98, 'color:blue', '35.98%'],
-            ['Emergency Services',  22.75, 'color:green', '22.75%'],
-            ['Infrastructure and Housing',  8.68, 'color:purple', '8.68%'],
-            ['Community Services',  6.09, 'color:red', '6.09%'],
-            ['Environment and Sustainability',  5.61, 'color:lightblue', '5.61%'],
-            ['Health',  1.07, 'orange', '1.07%'],
-            ['Administration, Law, and Other',  19.82, 'color:grey', '19.82%']
-            ]);
 
-      
-    
-        // var view = new google.visualization.DataView(data);
-        // view.setColumns([0, 1,
-        //                { calc: "stringify",
-        //                  sourceColumn: 1,
-        //                  type: "string",
-        //                  role: "annotation" },
-        //                2]);
-        
+
         var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
         chart.draw(data2019, options);
 
@@ -72,6 +87,16 @@
         document.getElementById('2020').addEventListener('click', function () {
         options.vAxis.title = '2020 budget percentage'
         chart.draw(data2020, options);
+        }, false);
+
+        document.getElementById('2021').addEventListener('click', function () {
+        options.vAxis.title = '2021 budget percentage'
+        chart.draw(data2021, options);
+        }, false);
+
+        document.getElementById('2022').addEventListener('click', function () {
+        options.vAxis.title = '2022 budget percentage'
+        chart.draw(data2022, options);
         }, false);
 
   },
@@ -91,6 +116,8 @@
             
     <input type="button" id="2019" value="2019" />
     <input type="button" id="2020" value="2020" />
+    <input type="button" id="2021" value="2021" />
+    <input type="button" id="2022" value="2022" />
 
 </body>
 </html>
