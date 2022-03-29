@@ -80,21 +80,29 @@
         chart.draw(data2019, options);
 
         document.getElementById('2019').addEventListener('click', function () {
+        var p = document.getElementById("title");
+        p.style.display = "block";  
         options.vAxis.title = '2019 budget percentage'
         chart.draw(data2019, options);
         }, false);
 
         document.getElementById('2020').addEventListener('click', function () {
+        var p = document.getElementById("title");
+        p.style.display = "block";  
         options.vAxis.title = '2020 budget percentage'
         chart.draw(data2020, options);
         }, false);
 
         document.getElementById('2021').addEventListener('click', function () {
+        var p = document.getElementById("title");
+        p.style.display = "block";  
         options.vAxis.title = '2021 budget percentage'
         chart.draw(data2021, options);
         }, false);
 
         document.getElementById('2022').addEventListener('click', function () {
+        var p = document.getElementById("title");
+        p.style.display = "block";  
         options.vAxis.title = '2022 budget percentage'
         chart.draw(data2022, options);
         }, false);
@@ -110,7 +118,10 @@
 
     <script src="https://www.gstatic.com/charts/loader.js"></script>
    
-    
+    <h1 id = "title">Budget for 2019</h1>
+    <h1 id = "title">Budget for 2020</h1>
+    <h1 id = "title">Budget for 2021</h1>
+    <h1 id = "title">Budget for 2022</h1>
     <div id="chart_div"></div>
  
             
