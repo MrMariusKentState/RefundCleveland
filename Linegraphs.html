@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "RefundCleTotals.css"/>
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Environment and Sustainability', 'Health', 'Community Services', 'Infrastructure and Housing', 'Emergency Services', 'Policing and Corrections', 'Administration, Law, and Other'],
+          ['2019',  33966932, 6238843, 35788485, 66621278, 136869117, 216928495, 143536732],
+          ['2020',  34006956, 6515949, 36932490, 52614486, 137953502, 218163964, 120146367],
+          ['2021',  39977984, 6505316, 39341013, 56291666, 142939315, 220802402, 128279812],
+          ['2022',  40005257, 9868366, 44171442, 53354259, 146739779, 237046040, 122462271]
+        ]);
+
+        var options = {
+          title: 'Company Performance',
+          curveType: 'function',
+          pointSize: 5,
+          legend: { position: 'bottom' },
+          height: 750
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+  
+
+      </script>
+</head>
+
+<body>
+
+<div id = "curve_chart"></div>
+
+
+</body>
+</html>

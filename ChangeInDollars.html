@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "RefundCleTotals.css"/>
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      
+
+
+        google.charts.load('current', {
+        'callback': function() {
+
+
+      
+        var data2019change = google.visualization.arrayToDataTable([
+            ['Year', 'Total expenses(U.S.$)', {role: 'style'}, {type: 'string', role: 'annotation'}],
+            ['Policing and Corrections',  1235469, 'color:blue', '$1,235,469'],
+            ['Emergency Services',  1084385, 'color:green', '$1,084,385'],
+            ['Infrastructure and Housing',  -14006792, 'color:purple', '-$14,006,792'],
+            ['Community Services',  1144005, 'color:red', '$1,144,005'],
+            ['Environment and Sustainability',  40024, 'color:lightblue', '$40,024'],
+            ['Health',  277106, 'orange', '$277,106'],
+            ['Administration, Law, and Other',  -23390365, 'color:grey', '-$23,390,365']
+            ]);
+
+        var data2020change = google.visualization.arrayToDataTable([
+            ['Year', 'Total expenses(U.S.$)', {role: 'style'}, {type: 'string', role: 'annotation'}],
+            ['Policing and Corrections',  2638438, 'color:blue', '$2,638,438'],
+            ['Emergency Services',  4985813, 'color:green', '$4,985,813'],
+            ['Infrastructure and Housing',  3677180, 'color:purple', '$3,677,180'],
+            ['Community Services',  2408523, 'color:red', '$2,408,523'],
+            ['Environment and Sustainability',  5971028, 'color:lightblue', '$5,971,028'],
+            ['Health',  -10633, 'orange', '-$10,633'],
+            ['Administration, Law, and Other',  8133445, 'color:grey', '$8,133,445']
+            ]);
+
+        var data2021change = google.visualization.arrayToDataTable([
+            ['Year', 'Total expenses(U.S.$)', {role: 'style'}, {type: 'string', role: 'annotation'}],
+            ['Policing and Corrections',  16243638, 'color:blue', '$16,243,638'],
+            ['Emergency Services',  3800464, 'color:green', '$3,800,464'],
+            ['Infrastructure and Housing',  -2937407, 'color:purple', '-$2,937,407'],
+            ['Community Services',  4830429, 'color:red', '$4,830,429'],
+            ['Environment and Sustainability',  27273, 'color:lightblue', '$27,273'],
+            ['Health',  3363050, 'orange', '$3,363,050'],
+            ['Administration, Law, and Other',  -5817541, 'color:grey', '-$5,817,541']
+            ]);
+
+
+        var options = {
+            
+            width: 1200,
+            height: 400,
+            colors:['blue','green','purple','red','lightblue','orange','grey'],
+            vAxis: {
+                    title: 'Change in expenses(U.S. dollars)',
+                    },
+            bar: {groupWidth: "95%"},
+            legend: { position: 'none' },
+            
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+        chart.draw(data2019change, options);
+
+        document.getElementById('2019').addEventListener('click', function () {
+        options.vAxis.title = '$$ change in expenses (2019 - 20)'
+        chart.draw(data2019change, options);
+        }, false);
+
+
+        document.getElementById('2020').addEventListener('click', function () {
+        options.vAxis.title = '$$ change in expenses (2020 - 21)'
+        chart.draw(data2020change, options);
+        }, false);
+
+
+        document.getElementById('2021').addEventListener('click', function () {
+        options.vAxis.title = '$$ change in expenses (2021 - 22)'
+        chart.draw(data2021change, options);
+        }, false);
+
+
+    },
+  'packages':['corechart', 'bar']
+});
+
+
+
+
+      </script>
+</head>
+<body>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <h2>Change in budgetary expenses (U.S. dollars)</h2>
+   
+    <div id = "chart_div"></div>
+
+    <input type="button" id="2019" value="2019-20" />
+    <input type="button" id="2020" value="2020-21" />
+    <input type="button" id="2021" value="2021-22" />
+    
+
+
+</body>
+</html>
